@@ -11,7 +11,7 @@
 
 Room::Room(int& x, int& y, int& w, int& l, Direction& dir) :
 _x(x), _y(y), _w(w), _l(l), _dir(dir) {
-    
+    createRoom();
 }
 
 Room::~Room() {

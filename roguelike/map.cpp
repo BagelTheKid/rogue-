@@ -37,9 +37,15 @@ bool Map::makeRoom(int& x, int& y, Direction& dir) {
     Tile* mapMap = _map;
     mt19937 gen (123);
     uniform_real_distribution<int> random(3, 10);
+    // Used in room generation
     int width = random(gen);
     int height = random(gen);
     
+    const Tile floor = Tile::DirtFloor;
+    const Tile wall = Tile::DirtWall;
+    
+    // Making the room
+    //Room room = new Room()
     
     return result;
 }
