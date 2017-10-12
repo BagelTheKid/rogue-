@@ -24,32 +24,30 @@ void Room::createRoom() {
         case Direction::North:
             for (xS = getLowerBounds(_x, _w); xS < getUpperBounds(_x, _w); xS++) {
                 for (yS = _y; yS > _y - _l; yS--) {
-                    _room.push_back(*new Square(xS, yS));
+                    _room.push_back(Square(xS, yS));
                 }
             }
             break;
         case Direction::East:
             for (xS = _x; xS < _x + _w; xS++) {
                 for (yS = getLowerBounds(_y, _l); yS < getUpperBounds(_y, _l); yS++) {
-                    _room.push_back(*new Square(xS, yS));
+                    _room.push_back(Square(xS, yS));
                 }
             }
             break;
         case Direction::South:
             for (xS = getLowerBounds(_x, _w); xS < getUpperBounds(_x, _w); xS++) {
                 for (yS = _y; yS < _y + _l; yS++) {
-                    _room.push_back(*new Square(xS, yS));
+                    _room.push_back(Square(xS, yS));
                 }
             }
             break;
         case Direction::West:
             for (xS = _x; xS > _x - _w; xS--) {
                 for (yS = getLowerBounds(_y, _l); yS < getUpperBounds(_y, _l); yS++) {
-                    _room.push_back(*new Square(xS, yS));
+                    _room.push_back(Square(xS, yS));
                 }
             }
-            break;
-        default:
             break;
     }
 }

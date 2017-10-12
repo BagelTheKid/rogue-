@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <array>
 #include <list>
+#include <vector>
 #include <tuple>
 #include "enums.h"
 #include "room.hpp"
@@ -27,10 +28,10 @@ private:
     int _room;
     void init();
     bool makeRoom(int& x, int& y, Direction& dir);
-    bool isWall(int& x, int& y, int& width, int& height, int& xpos, int& ypos, Direction& dir);
+    bool isWall(int& x, int& y, int& width, int& height, int xpos, int ypos, Direction& dir);
     Direction randomDirection();
-    list<tuple<Square, Direction, Tile>> getSurroundings(int& x, int& y);
-    Tile getTile(int& x, int&y);
+    vector<tuple<Square, Direction, Tile>> getSurroundings(int& x, int& y);
+    Tile getTile(int x, int y);
     string getTileChar(Tile& t);
     
     
